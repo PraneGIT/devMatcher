@@ -1,0 +1,53 @@
+# Binaries
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# Build / Output
+/bin/
+/build/
+/dist/
+*.log
+
+# IDE / Editor Configs
+.vscode/
+.idea/
+*.swp
+*.swo
+*.bak
+*~
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Environment / Config
+.env
+.env.local
+.env.production
+.env.*
+
+# Dependency Management (Go Modules)
+vendor/
+
+# Go cache & test artifacts
+*.coverprofile
+*.test
+cover.out
+
+# Docker
+docker-compose.override.yml
+*.pid
+
+# MongoDB and Redis dump files
+*.dump
+*.rdb
+
+# Git Hooks / Custom Tools
+.githooks/
+scripts/*.sh~
+scripts/*.tmp
