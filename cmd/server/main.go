@@ -6,11 +6,14 @@ import (
 
     "github.com/gin-gonic/gin"
 	"github.com/PraneGIT/devmatcher/internal/config"
+	"github.com/PraneGIT/devmatcher/internal/store/mongodb"
 )
 
 func main() {
 	config.LoadConfig()
+	mongodb.InitMongo()
     port := config.AppConfig.Port
+
 
     router := gin.Default()
 
