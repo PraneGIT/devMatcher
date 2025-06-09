@@ -4,6 +4,7 @@ import (
 	"github.com/gin-gonic/gin"
 
 	"github.com/PraneGIT/devmatcher/internal/api/handlers"
+	"github.com/PraneGIT/devmatcher/internal/api/middleware"
 )
 
 func SetupRouter() *gin.Engine {
@@ -26,7 +27,7 @@ func SetupRouter() *gin.Engine {
 
 		// User profile routes (protected)
 		user := api.Group("/user")
-		// user.Use(middleware.Auth()) // Uncomment when auth middleware is ready
+		user.Use(middleware.Auth())
 		{
 			user.GET("/profile", handlers.GetProfile)
 			user.PUT("/profile", handlers.UpdateProfile)
